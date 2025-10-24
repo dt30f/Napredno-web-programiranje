@@ -1,1 +1,24 @@
-<p>all-users works!</p>
+<div class="users-container">
+  <h2 class="title"><i class="bi bi-people-fill"></i> Lista korisnika</h2>
+
+  <div class="table-responsive">
+    <table class="table custom-table align-middle">
+      <thead>
+      <tr>
+        <th>Ime</th>
+        <th>Prezime</th>
+        <th>Email</th>
+        <th>Dozvole</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let user of users" (click)="onUserClick(user.id)">
+        <td>{{ user.ime }}</td>
+        <td>{{ user.prezime }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.dozvole.join(', ') }}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -7,7 +7,7 @@
   --color-sand: #B3AF8F;
   --color-blue: #415A77;
   --color-navy: #1B263B;
-  --color-dark: #0D1B2A;
+  --color-dark: #0d1b2a;
 
   /* podrazumevano – dark tema */
   --bg-main: var(--color-navy);

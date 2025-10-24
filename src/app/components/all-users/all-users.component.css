@@ -1,0 +1,117 @@
+.users-container {
+  background-color: var(--bg-main);
+  color: var(--text-color);
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  margin: 2rem auto;
+  max-width: 900px;
+  transition: all 0.3s ease;
+}
+
+.title {
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.custom-table tbody tr {
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.custom-table tbody tr:hover {
+  background-color: var(--color-blue);
+  color: var(--color-light);
+  transform: scale(1.01);
+}
+
+
+/* Custom tabela */
+.custom-table {
+  width: 90%;
+  border-collapse: separate;
+  border-spacing: 0 10px;
+  color: var(--text-color);
+}
+
+.custom-table thead {
+  background-color: var(--bg-nav);
+  color: var(--accent);
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.custom-table thead th {
+  padding: 1rem;
+  border: none;
+}
+
+.custom-table tbody tr {
+  background-color: rgba(255, 255, 255, 0.05);
+  transition: all 0.25s ease;
+}
+
+.custom-table tbody tr:hover {
+  background-color: var(--color-blue);
+  color: var(--color-light);
+  transform: scale(1.01);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.custom-table td {
+  padding: 1rem;
+  border: none;
+  vertical-align: middle;
+}
+
+
+
+
+/* Scroll za manje ekrane */
+.table-responsive {
+  overflow-x: auto;
+  border-radius: 12px;
+}
+
+/* Animacija fade-in */
+.users-container {
+  opacity: 0;
+  animation: fadeIn 0.8s forwards ease-in-out;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsivnost */
+@media (max-width: 768px) {
+  .title {
+    font-size: 1.4rem;
+  }
+  .custom-table thead {
+    display: none;
+  }
+  .custom-table tr {
+    display: block;
+    margin-bottom: 1rem;
+  }
+  .custom-table td {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .custom-table td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: var(--accent);
+  }
+}

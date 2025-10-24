@@ -1,1 +1,46 @@
-<p>edit-user works!</p>
+<div class="edit-user-container card shadow-lg p-4">
+  <h2 class="mb-4 text-accent">
+    <i class="bi bi-person-lines-fill"></i> Uredi korisnika
+  </h2>
+
+  <form [formGroup]="userForm" (ngSubmit)="onSubmit()" class="d-flex flex-column gap-3">
+    <div class="form-group">
+      <label for="ime" class="form-label fw-bold">Ime</label>
+      <input id="ime" type="text" class="form-control" formControlName="ime" />
+    </div>
+
+    <div class="form-group">
+      <label for="prezime" class="form-label fw-bold">Prezime</label>
+      <input id="prezime" type="text" class="form-control" formControlName="prezime" />
+    </div>
+
+    <div class="form-group">
+      <label for="email" class="form-label fw-bold">Email</label>
+      <input id="email" type="email" class="form-control" formControlName="email" />
+    </div>
+
+    <div class="form-group">
+      <label class="form-label fw-bold">Dozvole</label>
+      <div class="d-flex flex-wrap gap-3 mt-2">
+        <div
+          *ngFor="let control of dozvoleControls; let i = index"
+          class="form-check form-check-inline"
+        >
+          <input
+            type="checkbox"
+            [formControl]="control"
+            class="form-check-input"
+            id="perm{{i}}"
+          />
+          <label class="form-check-label" for="perm{{i}}">
+            {{ allPermissions[i] }}
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <button class="btn btn-accent align-self-start mt-3 px-4 py-2" type="submit">
+      💾 Sačuvaj izmene
+    </button>
+  </form>
+</div>

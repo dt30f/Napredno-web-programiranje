@@ -1,0 +1,138 @@
+/* Navbar */
+.navbar {
+  background-color: var(--bg-nav);
+  color: var(--text-color);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.site-title {
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.nav-links .nav-link {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links .nav-link:hover {
+  color: var(--accent);
+}
+
+.btn-accent {
+  background-color: var(--accent);
+  color: var(--bg-main);
+  font-weight: 600;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.btn-accent:hover {
+  background-color: var(--color-blue);
+  color: var(--color-light);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+/* Hero section */
+.hero {
+  min-height: 90vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, var(--bg-main), var(--bg-nav));
+  color: var(--text-color);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-content {
+  flex: 1 1 45%;
+  max-width: 500px;
+}
+
+.hero-content h2 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.hero-content p {
+  font-size: 1.25rem;
+  margin-top: 1rem;
+}
+
+/* Hero image */
+.hero-image {
+  flex: 1 1 45%;
+  max-width: 450px;
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  object-fit: cover;
+}
+
+/* Floating icons na dnu */
+.floating-icons {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 2rem;
+  font-size: 2rem;
+  color: var(--accent);
+  animation: float 6s ease-in-out infinite;
+  z-index: 100;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(-15px); }
+}
+
+/* Fade-in animacije */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+.fade-in.delay-1 { animation-delay: 0.5s; }
+.fade-in.delay-2 { animation-delay: 1s; }
+.fade-in.delay-3 { animation-delay: 1.5s; }
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+/* Footer */
+.footer {
+  background-color: var(--bg-nav);
+  color: var(--text-color);
+  font-size: 0.9rem;
+  margin-top: 3rem;
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-content, .hero-image {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+  .floating-icons {
+    bottom: 10px;
+    gap: 1.5rem;
+  }
+}

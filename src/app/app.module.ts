@@ -11,6 +11,8 @@ import { EditUserComponent } from './components/edit-user/edit-user.component';
 import { MachineCreateComponent } from './components/machine-create/machine-create.component';
 import { ErrorHistoryComponent } from './components/error-history/error-history.component';
 import { HomeComponent } from './components/home/home.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { HomeComponent } from './components/home/home.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

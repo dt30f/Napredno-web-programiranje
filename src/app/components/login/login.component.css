@@ -8,24 +8,27 @@
   min-height: 100vh;
   background-color: var(--bg-main);
   color: var(--text-color);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Arial', 'Helvetica', sans-serif; /* Oštriji profesionalni font */
 }
 
 /* Sama forma */
 form {
   background-color: var(--bg-nav);
   padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  border-radius: 0; /* uklonjene zaobljene ivice */
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
   width: 100%;
   max-width: 400px;
 }
 
-/* Naslov forme (ako dodate) */
+/* Naslov forme */
 form h2 {
   text-align: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
   color: var(--accent);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 /* Input polja */
@@ -33,14 +36,15 @@ form h2 {
   background-color: var(--bg-main);
   color: var(--text-color);
   border: 1px solid var(--accent);
-  border-radius: 8px;
+  border-radius: 0; /* oštre ivice */
   padding: 0.8rem;
+  font-weight: 500;
   transition: all 0.3s ease;
 }
 
 .form-outline input.form-control:focus {
   border-color: var(--accent);
-  box-shadow: 0 0 8px var(--accent);
+  box-shadow: 0 0 6px var(--accent);
   background-color: var(--bg-main);
   color: var(--text-color);
 }
@@ -48,24 +52,27 @@ form h2 {
 /* Labeli */
 .form-label {
   color: var(--text-color);
-  font-weight: 500;
+  font-weight: 400;
+  font-size: 0.95rem;
 }
 
 /* Dugme */
 .btn {
   background-color: var(--accent);
   color: var(--bg-main);
-  font-weight: 600;
+  font-weight: 700;
   border: none;
-  border-radius: 8px;
+  border-radius: 0; /* oštre ivice */
+  padding: 0.9rem;
+  text-transform: uppercase;
   transition: all 0.3s ease;
 }
 
 .btn:hover {
   background-color: var(--color-blue);
   color: var(--color-light);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transform: translateY(-1px);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.25);
 }
 
 /* Margin za inpute i dugme */

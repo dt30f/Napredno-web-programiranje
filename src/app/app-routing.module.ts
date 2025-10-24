@@ -22,8 +22,8 @@ const routes: Routes = [
   {
     path: 'allUsers',
     component: AllUsersComponent,
-    canActivate: [AuthGuard],
-    canDeactivate: [AuthGuard]
+   // canActivate: [AuthGuard],
+   // canDeactivate: [AuthGuard]
   },
   {
     path: 'addUser',
@@ -34,8 +34,8 @@ const routes: Routes = [
   {
     path: 'editUser/:id',
     component: EditUserComponent,
-    canActivate: [AuthGuard],
-    canDeactivate: [AuthGuard]
+   // canActivate: [AuthGuard],
+   // canDeactivate: [AuthGuard]
   },
   {
     path: 'machineSearch',
