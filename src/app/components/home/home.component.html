@@ -11,8 +11,12 @@
     </div>
 
     <!-- Slika sa desne strane -->
-    <div class="hero-image fade-in delay-3">
+    <div class="hero-image fade-in delay-3" *ngIf="!isLightTheme">
       <img src="assets/home%20page.png" alt="RAF Cloud illustration">
+    </div>
+
+    <div class="hero-image fade-in delay-3" *ngIf="isLightTheme">
+      <img src="assets/homepagelight.png" alt="RAF Cloud illustration">
     </div>
 
     <!-- Floating ikonice na dnu ekrana -->

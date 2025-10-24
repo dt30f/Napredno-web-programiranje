@@ -41,6 +41,7 @@ export class AuthService {
       const fakeToken = btoa(JSON.stringify({ email: user.email, time: new Date() }));
       localStorage.setItem(this.tokenKey, fakeToken);
       localStorage.setItem('loggedUser', JSON.stringify(user));
+      return true;
     }
     return false;
   }
