@@ -1,0 +1,53 @@
+.theme-toggle-btn {
+  background: none;
+  border: none;
+  color: var(--accent);
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.theme-toggle-btn:hover {
+  color: var(--text-color);
+  transform: rotate(15deg);
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-color);
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.custom-navbar {
+  background-color: var(--bg-nav);
+  transition: background-color 0.4s ease;
+}
+
+main.container {
+  background-color: var(--bg-main);
+  color: var(--text-color);
+}
+
+/* ---------------------- */
+/* Navbar link styling fix */
+/* ---------------------- */
+.nav-link {
+  color: var(--text-color) !important;
+  margin-left: 1rem;
+  transition: color 0.2s ease, border-bottom 0.2s ease;
+  border-bottom: 2px solid transparent;
+}
+
+.nav-link:hover {
+  color: var(--accent) !important;
+  border-bottom: 2px solid var(--accent);
+}
+
+.navbar-brand {
+  color: var(--accent) !important;
+}
+
+.navbar-brand:hover {
+  color: var(--text-color) !important;
+}
+

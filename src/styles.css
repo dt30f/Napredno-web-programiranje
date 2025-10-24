@@ -1,1 +1,25 @@
-/* You can add global styles to this file, and also import other style files */
+@import "bootstrap";
+@import "bootstrap-icons/font/bootstrap-icons.css";
+
+
+:root {
+  --color-light: #E0E1DD;
+  --color-sand: #B3AF8F;
+  --color-blue: #415A77;
+  --color-navy: #1B263B;
+  --color-dark: #0D1B2A;
+
+  /* podrazumevano – dark tema */
+  --bg-main: var(--color-navy);
+  --bg-nav: var(--color-dark);
+  --text-color: var(--color-light);
+  --accent: var(--color-sand);
+}
+
+/* Light tema */
+[data-theme="light"] {
+  --bg-main: var(--color-light);
+  --bg-nav: var(--color-sand);
+  --text-color: var(--color-dark);
+  --accent: var(--color-blue);
+}

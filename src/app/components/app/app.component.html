@@ -1,0 +1,43 @@
+<header>
+  <nav class="navbar navbar-expand-lg custom-navbar shadow-sm">
+    <div class="container-fluid">
+      <a [routerLink]="'/'" class="navbar-brand fw-bold">RAF Cloud</a>
+
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+        <div class="navbar-nav align-items-center">
+          <a [routerLink]="'/login'" class="nav-link">Login</a>
+          <a [routerLink]="'/allUsers'" class="nav-link">All Users</a>
+          <a [routerLink]="'/addUser'" class="nav-link">Create User</a>
+          <a [routerLink]="'/machineSearch'" class="nav-link">Machines</a>
+          <a [routerLink]="'/createMachine'" class="nav-link">Create Machine</a>
+          <a [routerLink]="'/errorHistory'" class="nav-link">Error History</a>
+
+          <!-- Dugme za promenu teme -->
+          <button class="theme-toggle-btn ms-3" (click)="toggleTheme()">
+            <i class="bi" [ngClass]="currentTheme === 'dark' ? 'bi-sun-fill' : 'bi-moon-fill'"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main class="container pt-4 fade-in">
+  <router-outlet></router-outlet>
+</main>
+
+<footer class="footer mt-auto py-3 text-center">
+  <small>&copy; 2025 RAF Cloud Project — Angular Frontend</small>
+</footer>

@@ -1,0 +1,74 @@
+/* login.component.css */
+
+/* Centriranje forme */
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--bg-main);
+  color: var(--text-color);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Sama forma */
+form {
+  background-color: var(--bg-nav);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Naslov forme (ako dodate) */
+form h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: var(--accent);
+}
+
+/* Input polja */
+.form-outline input.form-control {
+  background-color: var(--bg-main);
+  color: var(--text-color);
+  border: 1px solid var(--accent);
+  border-radius: 8px;
+  padding: 0.8rem;
+  transition: all 0.3s ease;
+}
+
+.form-outline input.form-control:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 8px var(--accent);
+  background-color: var(--bg-main);
+  color: var(--text-color);
+}
+
+/* Labeli */
+.form-label {
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+/* Dugme */
+.btn {
+  background-color: var(--accent);
+  color: var(--bg-main);
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: var(--color-blue);
+  color: var(--color-light);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+/* Margin za inpute i dugme */
+.mb-4 {
+  margin-bottom: 1.5rem !important;
+}
